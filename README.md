@@ -1,4 +1,5 @@
-Hey! This is **Team 99**.
+Hey! This is **Team 99**!
+
 We are four fantastic ladies:
 - Sandra B (Github manager and team lead)
 - Madara 
@@ -6,7 +7,7 @@ We are four fantastic ladies:
 - Triinu S
   
 **Little info about ourselves:**
-- My name is **Sandra**, I live in Riga and in Skulte.
+- My name is **Sandra B**, I live in Riga and in Skulte.
 I am a preschool teacher, but also have previous experience
 in implementation and supervision of financial and environmental
 investment projects. Currently I am riding the emotional
