@@ -1,13 +1,112 @@
+package com.datorium.Datorium.API;
 
-@GetMapping("/array")
-    public List<Integer> array(@RequestParam(value = "number1") int number1,
-                               @RequestParam(value = "number2") int number2,
-                               @RequestParam(value = "number3") int number3,
-                               @RequestParam(value = "number4") int number4) {
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(number1);
-        numbers.add(number2);
-        numbers.add(number3);
-        numbers.add(number4);
-        return numbers;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@SpringBootApplication
+@RestController
+@CrossOrigin
+public class DatoriumApiApplication {
+
+	public static void main(String[] args) {
+		System.out.println("asd");
+		SpringApplication.run(DatoriumApiApplication.class, args);
+	}
+
+
+	@GetMapping("/ping")
+	public String ping() {
+		return "pong";
+	}
+
+	@GetMapping("/hello")
+	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return String.format("Hello %s!", name);
+	}
+
+	@GetMapping("/sum")
+	public int sum(@RequestParam(value = "number1") int number1, @RequestParam(value = "number2") int number2){
+		return number1 + number2;
+	}
+
+	@GetMapping("/multiply")
+	public int multiply(@RequestParam(value = "number1") int number1, @RequestParam(value = "number2") int number2){
+		return number1 * number2;
+	}
+
+	@GetMapping("/array")
+	public List<Integer> array(@RequestParam(value = "number1") int number1,
+							   @RequestParam(value = "number2") int number2,
+							   @RequestParam(value = "number3") int number3,
+							   @RequestParam(value = "number4") int number4) {
+		List<Integer> numbers = new ArrayList<>();
+		numbers.add(number1);
+		numbers.add(number2);
+		numbers.add(number3);
+		numbers.add(number4);
+		return numbers;
+	}
+
+	@GetMapping("/cheese")
+	public Cheese cheese(@RequestParam(value = "name") String name,
+						 @RequestParam(value = "price") int price,
+						 @RequestParam(value = "quantity") int quantity) {
+		Cheese cheese = new Cheese();
+		cheese.setName(name);
+		cheese.setPrice(price);
+		cheese.setQuantity(quantity);
+		return cheese;
+	}
+}
+
+
+### ADD NEW CHEESE.JAVA CLASS TO INTELLIJ
+
+package com.datorium.Datorium.API;
+
+public class Cheese {
+    private String name;
+    private int price;
+    private int quantity;
+
+    public Cheese() {}
+
+    public Cheese(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+}
+
+
