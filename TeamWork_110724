@@ -1,1 +1,13 @@
-hello.
+
+@GetMapping("/array")
+    public List<Integer> array(@RequestParam(value = "number1") int number1,
+                               @RequestParam(value = "number2") int number2,
+                               @RequestParam(value = "number3") int number3,
+                               @RequestParam(value = "number4") int number4) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(number1);
+        numbers.add(number2);
+        numbers.add(number3);
+        numbers.add(number4);
+        return numbers;
+    }
