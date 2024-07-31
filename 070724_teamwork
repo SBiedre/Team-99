@@ -1,0 +1,23 @@
+#EASY
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('/content/transaction_dataset (1).csv')
+gender_counts = df['Gender'].value_counts(dropna=False)
+
+gender_counts.plot(kind = 'bar', color='skyblue')
+plt.title('Gender count')
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.show()
+
+#MEDIUM
+name_counts = df['Name'].value_counts()
+top_names = name_counts.iloc[:5]
+
+top_names.plot(kind='barh', color='skyblue')
+plt.title('Top 5 Most Frequent Names')
+plt.xlabel('Count')
+plt.ylabel('Name')
+plt.gca().invert_yaxis()  # To display the highest count at the top
+plt.show()
