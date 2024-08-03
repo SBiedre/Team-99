@@ -1,3 +1,4 @@
+```py
 #Task 1 - Calculate the percentage of pokemon with Type 1 == Water
 total_pokemon = len(pokemon_df)
 water_pokemon = len(pokemon_df[pokemon_df['Type 1'] == 'Water'])
@@ -28,3 +29,4 @@ plt.title('Count of Pokemon Types with Speed > 80')
 plt.xlabel('Type 1')
 plt.ylabel('Number of Pokemon')
 plt.xticks(rotation=45)
+```
