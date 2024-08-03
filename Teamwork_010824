@@ -1,1 +1,29 @@
+#DatoriumApiApplication.java
 
+@PostMapping("/burger")
+	public Burger makeBurger(@RequestBody Ingredients ingredients) {
+
+		if (ingredients.cheese.equals("gouda") && ingredients.meat.equals("beef")){
+			var burger = new Burger ();
+			burger.name = "Smash burger";
+			return burger;
+		}
+		return null;
+	}
+
+#Ingredients.java
+package com.datorium.Datorium.API;
+
+public class Ingredients {
+
+    public String cheese;
+    public String meat;
+}
+
+#Burger.java
+package com.datorium.Datorium.API;
+
+public class Burger {
+
+    public String name;
+}
