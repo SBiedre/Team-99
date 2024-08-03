@@ -16,7 +16,7 @@ print("Maximum speed:", max_speed)
 print("Minimum speed:", min_speed)
 print("Difference between max and min speed:", speed_difference)
 
-# Task 3 Filter the DataFrame to include only the Pokémon with 'Speed' >= 80. How many Pokémon meet this criterion? Display this DataFrame using your preferred visualization method.
+# Task 3 Filter the DataFrame to include only the Pokemon with 'Speed' >= 80. How many Pokemon meet this criterion? Display this DataFrame using your preferred visualization method.
 speed_above80 = pokemon_df[pokemon_df['Speed'] > 80]
 number_of_pokemons80 = len(speed_above80)
 print('The number of pokemons with speed above 80 is', number_of_pokemons80)
@@ -24,7 +24,7 @@ type_counts = speed_above80['Type 1'].value_counts()
 plt.figure(figsize=(10, 6))
 type_counts.plot(kind='bar', color='blue')
 
-plt.title('Count of Pokémon Types with Speed > 80')
+plt.title('Count of Pokemon Types with Speed > 80')
 plt.xlabel('Type 1')
-plt.ylabel('Number of Pokémon')
+plt.ylabel('Number of Pokemon')
 plt.xticks(rotation=45)
