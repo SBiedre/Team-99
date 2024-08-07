@@ -18,15 +18,28 @@ print("Minimum speed:", min_speed)
 print("Difference between max and min speed:", speed_difference)
 
 # Task 3 Filter the DataFrame to include only the Pokemon with 'Speed' >= 80. How many Pokemon meet this criterion? Display this DataFrame using your preferred visualization method.
-speed_above80 = pokemon_df[pokemon_df['Speed'] > 80]
-number_of_pokemons80 = len(speed_above80)
-print('The number of pokemons with speed above 80 is', number_of_pokemons80)
-type_counts = speed_above80['Type 1'].value_counts()
-plt.figure(figsize=(10, 6))
-type_counts.plot(kind='bar', color='blue')
+#Filter the DataFrame to include only the Pokémon with 'Speed' >= 80. How many Pokémon meet this criterion? Display this DataFrame using your preferred visualization method.
 
-plt.title('Count of Pokemon Types with Speed > 80')
+
+speed_greater_or_equal_80 = pokemon_df[pokemon_df['Speed'] >= 80]
+print("Number of Pokémon with Speed >= 80:",(len(speed_greater_or_equal_80)))
+
+print(speed_greater_or_equal_80)
+
+# Visualization: Bar plot of counts by 'Type 1'
+plt.figure(figsize=(10, 6))
+speed_greater_or_equal_80['Type 1'].value_counts().plot(kind='bar', color='skyblue')
+plt.title('Count of Pokémon with Speed >= 80 by Type 1')
 plt.xlabel('Type 1')
-plt.ylabel('Number of Pokemon')
-plt.xticks(rotation=45)
+plt.ylabel('Count')
+plt.xticks(rotation=90)
+plt.show()
+
+# Task4
+# Find Pokémon with the longest name (excluding spaces)? What is this pokemons name?
+
+pokemon_name_lengths = pokemon_df['Name'].apply(lambda x: len(x.replace(" ", "")))
+longest_name_index = pokemon_name_lengths.idxmax()
+longest_pokemon_name = pokemon_df.loc[longest_name_index, 'Name']
+print(f"The Pokémon with the longest name is: {longest_pokemon_name}")
 ```
