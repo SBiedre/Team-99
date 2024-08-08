@@ -1,5 +1,4 @@
-Clean Architecture
-
+Clean Architecture:
 Clean Architecture, a concept introduced by Robert C. Martin (Uncle Bob), emphasizes the separation of concerns and the independence of frameworks, UI, databases, and any external agency. The architecture focuses on 
 maintaining the flexibility and scalability of the system by structuring it into layers.
 Importance of Each Layer
@@ -69,7 +68,7 @@ Other Architecture Types: Pros and Cons
             Increased complexity in managing events and ensuring consistency.
             Debugging and monitoring can be challenging.
 
-Summary
+Summary:
 
 Clean Architecture helps in creating a system that is maintainable, testable, and flexible by enforcing clear separation of concerns. Understanding the importance of each layer and why a structured architecture is necessary 
 can guide developers in building robust systems. Comparing it with other architectures highlights the benefits and trade-offs involved, helping in making informed decisions based on specific project needs.
