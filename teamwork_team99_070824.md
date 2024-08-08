@@ -72,3 +72,16 @@ Summary:
 
 Clean Architecture helps in creating a system that is maintainable, testable, and flexible by enforcing clear separation of concerns. Understanding the importance of each layer and why a structured architecture is necessary 
 can guide developers in building robust systems. Comparing it with other architectures highlights the benefits and trade-offs involved, helping in making informed decisions based on specific project needs.
+
+When to Use Clean Architecture:
+
+    Large and Complex Projects: When working on large-scale applications with complex business logic, Clean Architecture can help manage complexity and maintainability.
+    Long-Term Projects: Projects that will be maintained and evolved over many years benefit from the structure and modularity.
+    Multiple Teams: When multiple teams are working on different parts of the application, Clean Architecture provides clear boundaries and interfaces.
+    Test-Driven Development (TDD): If TDD is a priority, Clean Architecture supports this well by decoupling business logic from external concerns.
+
+When Clean Architecture Might Not Be the Best Fit:
+
+    Small Projects: For small applications or prototypes, the complexity and overhead of Clean Architecture might be unnecessary.
+    Short-Term Projects: If the project has a very short lifespan, investing in a complex architecture might not be worth the effort.
+    Simple Business Logic: For applications with very simple business logic, a more straightforward architecture might suffice.
