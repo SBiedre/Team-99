@@ -1,3 +1,9 @@
+![AddCheeese](https://github.com/SBiedre/Team-99/blob/main/addCheese.png?raw=true)
+![UpdateCheese](https://github.com/SBiedre/Team-99/blob/main/updateCheese.png?raw=true)
+![GetCheese](https://github.com/user-attachments/assets/1adb6eff-fe55-4db6-b4a0-fe338dd13dd5)
+
+
+
 Cheese
 ```java
 package com.datorium.Datorium.API.DTOs;
