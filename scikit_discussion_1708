@@ -1,1 +1,44 @@
+###
+1. What is an error rate?
+In simple terms, the error rate in the scikit-learn library is a measure of how often a machine learning model makes wrong predictions. It is calculated as the percentage of incorrect predictions out of the total number of predictions made. 
+For example, if a model predicts 100 times and 10 of those predictions are wrong, the error rate would be 10%.
 
+2. Where you could use other machine-learning models?
+Machine learning models can be used in various areas, including:
+- Healthcare: Predicting diseases, personalizing treatments, and analyzing medical images.
+- Finance: Detecting fraud, predicting stock prices, and assessing credit risk.
+- Retail: Recommending products, optimizing pricing, and managing inventory.
+- Transportation: Optimizing routes, predicting traffic, and enabling self-driving cars.
+- Marketing: Segmenting customers, targeting ads, and analyzing customer sentiment.
+- Manufacturing: Predictive maintenance, quality control, and optimizing production processes.
+
+3. What is the difference between supervised and unsupervised training?
+The difference between supervised and unsupervised training lies in the type of data used and the goal of the training process:
+
+Supervised Training:
+  Data: Uses labeled data, meaning each training example comes with an input-output pair (features and the correct answer).
+  Goal: The model learns to predict the output from the input data.
+  Example: Predicting house prices based on features like size, location, and number of bedrooms.
+
+Unsupervised Training:
+   Data: Uses unlabeled data, meaning the training examples only have input data without any associated output.
+   Goal: The model finds patterns or structures in the input data.
+   Example: Grouping customers into segments based on purchasing behavior without prior knowledge of the segments.
+
+4. How to import different models from the scikit-learn package?
+Just use "import" statement and specifying the model you want to use. For example ```from sklearn.tree import DecisionTreeClassifier```.
+
+5. How can you evaluate the performance of a machine learning model in scikit-learn
+The evaluation technique depends on the type of model and problem (classification, regression, etc.) you use. There are various evaluation tools available, 
+to use desired tool you need to impot it.
+For classification models you can use:
+- "accuracy_score" measures the percentage of correct predictions, 
+- "confusion_matrix" shows the counts of true positives, true negatives, false positives, and false negatives,
+- "precision_score", recall_score and f1_score provide more detailed insights, especially when dealing with imbalanced dataset,
+- "roc_auc_score" measures the model's ability to distinguish between classes.
+For regression models you can use:
+- "mean_absolute_error" measures the average absolute errors between the predicted and actual values,
+- "mean_squared_error" measures the average squared errors between predicted and actual values,
+- "r2_score" represents the proportion of variance explained by the model.
+Cross-Validation Score "cross_val_score" evaluates the model's performance on different subsets of the data to ensure it's not overfitting.
+###
