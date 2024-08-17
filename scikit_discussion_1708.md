@@ -11,6 +11,7 @@ Machine learning models can be used in various areas, including:
 * Marketing: Segmenting customers, targeting ads, and analyzing customer sentiment.
 * Manufacturing: Predictive maintenance, quality control, and optimizing production processes.
 
+
 # **3. What is the difference between supervised and unsupervised training?**
 The difference between supervised and unsupervised training lies in the type of data used and the goal of the training process:
 
@@ -24,6 +25,7 @@ The difference between supervised and unsupervised training lies in the type of 
    Goal: The model finds patterns or structures in the input data.
    Example: Grouping customers into segments based on purchasing behavior without prior knowledge of the segments.
 
+Another real life example: supervised learning uses labeled data to make predictions, like using a linear model to predict how many streams a new song will get based on features like artist popularity and genre. Unsupervised learning, on the other hand, finds patterns in data without labels, such as clustering similar songs together into playlists based on characteristics like tempo and mood.
 # **4. How to import different models from the scikit-learn package?**
 Just use "import" statement and specifying the model you want to use. For example ```from sklearn.tree import DecisionTreeClassifier```.
 
