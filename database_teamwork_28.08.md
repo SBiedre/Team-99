@@ -18,6 +18,7 @@ VALUES
 ```sql
 Select * from products
 ```
+![products](https://github.com/SBiedre/Team-99/blob/main/Screenshot%202024-08-28%20at%2023-21-47%20SQL%20OnLine%20IDE.png?raw=true)
 
 ```sql
 CREATE TABLE auto
@@ -40,6 +41,7 @@ VALUES
 ```sql
 Select * from auto
 ```
+![auto](https://github.com/SBiedre/Team-99/blob/main/Screenshot%202024-08-28%20at%2023-23-18%20SQL%20OnLine%20IDE.png?raw=true)
 
 ```sql
 CREATE TABLE flowers
@@ -63,3 +65,4 @@ VALUES
 ```sql
 Select * from flowers
 ```
+![flowers](https://github.com/SBiedre/Team-99/blob/main/Screenshot%202024-08-28%20at%2023-24-51%20SQL%20OnLine%20IDE.png?raw=true)
