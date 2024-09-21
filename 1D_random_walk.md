@@ -27,3 +27,7 @@ plt.show()
 
 print(f'Number of up steps: {up_steps}')
 ```
+![steps](https://github.com/user-attachments/assets/d439db6d-ce94-4f71-a60f-fdfaa66d20a9)
+
+![1Dwalk](https://raw.githubusercontent.com/SBiedre/Team-99/59293041410d9d040d56661f31d31d0eba62d557/1d.png)
+
