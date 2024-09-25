@@ -1,0 +1,58 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Main {
+
+    // Method to convert Roman numeral to integer
+    public static int romanToInt(String s) {
+        // Create a map of Roman numerals and their corresponding integer values
+        Map<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+
+        int total = 0; // to store the result
+        int prevValue = 0; // to store the value of the previous Roman numeral
+
+        // Iterate through each character in the string
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char currentChar = s.charAt(i);
+            int currentValue = romanMap.get(currentChar);
+
+            // If the current value is smaller than the previous one, subtract it
+            if (currentValue < prevValue) {
+                total -= currentValue;
+            } else {
+                total += currentValue;
+            }
+
+            // Update the previous value to the current one
+            prevValue = currentValue;
+        }
+
+        return total;
+    }
+
+    public static void main(String[] args) {
+        // Create a Scanner object to take input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a Roman numeral
+        System.out.print("Enter a Roman numeral: ");
+        String romanNumeral = scanner.nextLine();
+
+        // Convert the Roman numeral to an integer
+        int result = romanToInt(romanNumeral);
+
+        // Display the result
+        System.out.println("The integer value of " + romanNumeral + " is: " + result);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
